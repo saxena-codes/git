@@ -56,7 +56,31 @@ $ cat ~/.ssh/id_ed25519.pub
 # displayed in the terminal to your clipboard
 ```
 
-> Follow the link mentioned at `Reference 3` for adding the key to github account. 
+> After this, follow the link mentioned at `Reference 3` for adding the key to github account. 
+
+## Git with SSH instead of https
+
+1. Switching from https to ssh. Go to the repo directory and follow:
+
+```
+$ git remote -v
+> origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+> origin  https://github.com/USERNAME/REPOSITORY.git (push)
+```
+
+2. Change the remote.
+
+```
+$ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+```
+
+3. Verify
+
+```
+$ git remote -v
+> origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+> origin  git@github.com:USERNAME/REPOSITORY.git (push)
+``` 
 
 ## References:
 
@@ -65,7 +89,5 @@ $ cat ~/.ssh/id_ed25519.pub
 2. <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
 
 3. <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>
-
-3. <https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/authorizing-an-ssh-key-for-use-with-saml-single-sign-on>
 
 4. <https://gist.github.com/asksven/b37e8d83eca7f77484be9dd7af2b98e6>
