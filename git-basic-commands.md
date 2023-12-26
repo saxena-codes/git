@@ -43,3 +43,19 @@ $ git commit -m "Your message for the commit."
 ```
 $ git push
 ```
+
+## Checking the changes in a file/ files.
+
+1. To check the changes in a file.
+
+```
+$ git diff README.md
+```
+
+2. To check all the changes made.
+
+```
+$ git diff
+```
+
+## The End

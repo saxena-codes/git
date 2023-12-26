@@ -41,7 +41,7 @@ $ eval "$(ssh-agent -s)"
 3. Add your SSH private key to the ssh-agent.
 
 ```
-ssh-add ~/.ssh/id_ed25519
+$ ssh-add ~/.ssh/id_ed25519
 ```
 
 > **Note**: If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_ed25519 in the command with the name of your private key file.
